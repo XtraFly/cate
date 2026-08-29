@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #f3e6c4;
+  --color-well: #0a1018;
+  --color-bg-deep: #ead6a4;
+  --color-surface: #fff8ea;
+  --color-cream: #f7edcf;
+  --color-ink: #1c140a;
+  --color-ink-soft: #5c4a2e;
+  --color-muted: #8a7349;
+  --color-gold: #d4a017;
+  --color-gold-deep: #8b6914;
+  --color-line: #d9c28a;
+  --color-fg: #1c140a;
+  --font-display: "Cinzel", ui-serif, Georgia, serif;
+  --font-sans: "Figtree", ui-sans-serif, system-ui, sans-serif;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-xl: 32px;
+  --shadow-border: 0 0 0 1px rgba(28, 20, 10, 0.06), 0 1px 2px -1px rgba(28, 20, 10, 0.06),
+    0 2px 4px 0 rgba(28, 20, 10, 0.04);
+  --shadow-stage: 0 18px 40px -24px rgba(90, 55, 8, 0.45), 0 0 0 1px rgba(28, 20, 10, 0.06);
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --motion-micro: 80ms;
+  --motion-quick: 150ms;
+  --motion-fast: 250ms;
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html,
+  body,
+  #app {
+    min-height: 100%;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip;
+    background: var(--color-bg);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+  }
+
+  html.sliding,
+  html.sliding body {
+    overflow: hidden;
+    overscroll-behavior: none;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  img,
+  canvas,
+  svg {
+    max-width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
