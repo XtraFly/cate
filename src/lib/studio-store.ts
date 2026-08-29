@@ -47,8 +47,8 @@ const defaultOverlays: OverlayFlags = {
 
 const VIEW_DEFAULTS = {
   offsetX: 0,
-  offsetY: 0.05,
-  scale: 1.2,
+  offsetY: 0.04,
+  scale: 1.32,
   rotation: 0,
   goldWash: 0.08,
   cOpacity: 1,

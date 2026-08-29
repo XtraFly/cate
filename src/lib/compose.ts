@@ -398,7 +398,7 @@ export async function exportCatePfp(opt: ComposeOptions): Promise<Blob> {
 }
 
 export const SAMPLES = [
-  { id: "tabby", src: "/samples/tabby.jpg?v=14", label: "Cate" },
+  { id: "tabby", src: "/samples/tabby.jpg?v=20", label: "Cate" },
   { id: "poorgoat", src: "/samples/poorgoat.jpg?v=3", label: "@PoorGoat_" },
   { id: "criptow", src: "/samples/criptow.jpg?v=14", label: "@criptow_" },
 ] as const;
